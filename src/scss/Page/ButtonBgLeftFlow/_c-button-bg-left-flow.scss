@@ -1,0 +1,92 @@
+@use "../../Setting/"as s;
+
+.c-button-bg-left-flow {
+
+	a {
+		//ブロック部分
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden; //背景のアニメーションが飛び出るのを防ぐ
+		min-height: 42px;
+		padding: 1em 0;
+
+		//フォント部分
+		font-size: max(10px, s.vw(s.$spDesign, 17));
+		border: 1px solid var(--color-base);
+		background-color: var(--color-base);
+		letter-spacing: 0.12em;
+		font-weight: 900;
+		line-height: 1;
+
+
+		//アニメーション
+		transition: ease .2s;
+
+		@include s.media(md) {
+			/*PCのみ*/
+			min-height: auto;
+			padding: 0.8em 0;
+			font-size: min(s.vw(1000, 21), 2.1rem);
+			border-width: 2.5px;
+		}
+
+
+		//背景のアニメーション（左から右に流れる）
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background: var(--color-main);
+			width: 100%;
+			height: 100%;
+			transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+			transform: scale(0, 1);
+			transform-origin: right top;
+		}
+
+
+		.text {
+			position: relative;
+			z-index: 3;
+			color: var(--color-main);
+		}
+
+		.arrow {
+			position: absolute;
+			top: 0;
+			right: 1em;
+			bottom: 0;
+
+			margin: auto 0;
+			width: 1.35em;
+			height: auto;
+			z-index: 3;
+
+			g {
+				stroke: var(--color-main);
+				transition: ease .2s;
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+
+			span {
+				color: var(--color-base);
+			}
+
+			&:before {
+				transform-origin: left top;
+				transform: scale(1, 1);
+			}
+
+			g {
+				stroke: var(--color-base);
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*英語フォント*/
+@media print, screen and (min-width:769px) {
+  .c-button-icon-text-arrow {
+    max-width: 498px;
+  }
+}
+.c-button-icon-text-arrow > a, .c-button-icon-text-arrow > span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--color-main);
+  padding: 1em 2.5em;
+  color: var(--color-main);
+  font-size: min(4.2666666667vw, 2.048rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media print, screen and (min-width:769px) {
+  .c-button-icon-text-arrow > a, .c-button-icon-text-arrow > span {
+    font-size: 2.1rem;
+    letter-spacing: 0.1em;
+    padding: 1em 1em 1em 20%;
+  }
+}
+.c-button-icon-text-arrow > a .icon, .c-button-icon-text-arrow > span .icon {
+  height: 1.1em;
+  aspect-ratio: 24/16;
+  margin-right: 0.5em;
+}
+@media print, screen and (min-width:769px) {
+  .c-button-icon-text-arrow > a .icon, .c-button-icon-text-arrow > span .icon {
+    margin-right: 1em;
+  }
+}
+.c-button-icon-text-arrow > a .icon svg, .c-button-icon-text-arrow > span .icon svg {
+  width: auto;
+  height: 100%;
+  overflow: visible;
+}
+.c-button-icon-text-arrow > a .icon svg *, .c-button-icon-text-arrow > span .icon svg * {
+  fill: var(--color-main);
+  -webkit-transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.c-button-icon-text-arrow > a::after, .c-button-icon-text-arrow > span::after {
+  content: "";
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.1em;
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 1px solid var(--color-main);
+  border-top: 1px solid var(--color-main);
+  -webkit-transform: translateX(-25%) rotate(45deg);
+          transform: translateX(-25%) rotate(45deg);
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.c-button-icon-text-arrow > a:hover, .c-button-icon-text-arrow > span:hover {
+  opacity: 1;
+  color: #fff;
+  background-color: var(--color-main);
+}
+.c-button-icon-text-arrow > a:hover .icon svg *, .c-button-icon-text-arrow > span:hover .icon svg * {
+  fill: #fff;
+}
+.c-button-icon-text-arrow > a:hover::after, .c-button-icon-text-arrow > span:hover::after {
+  border-color: #fff;
+}
