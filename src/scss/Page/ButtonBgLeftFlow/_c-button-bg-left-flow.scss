@@ -48,6 +48,10 @@
 			transform-origin: right top;
 		}
 
+		//背景のアニメーション（ホバー：左から右に拡大、ホバーを解除したら右から左にもどる）
+		&:before {
+			transform-origin: left top; //ここを変更
+		}
 
 		.text {
 			position: relative;
