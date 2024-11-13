@@ -1,0 +1,512 @@
+@charset "UTF-8";
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+iframe,
+img {
+  border: none;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  margin: inherit;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-feature-settings: "palt" 1;
+  font-feature-settings: "palt" 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul li a img {
+  margin: 0;
+  padding: 0;
+}
+
+li img {
+  vertical-align: bottom;
+}
+
+a:focus {
+  overflow: hidden;
+  outline: none;
+}
+
+ol,
+ul {
+  list-style: none outside none;
+}
+
+ol.link,
+ul.link {
+  list-style: outside none none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+main {
+  display: block;
+}
+
+i {
+  font-style: normal;
+}
+
+:root {
+  --color-base: #000;
+  --color-main: #a57f02;
+  --font-mincho: "ヒラギノ明朝 ProN W3",
+  	"Hiragino Mincho ProN",
+  	"Noto Serif JP",
+  	"游明朝",
+  	YuMincho,
+  	"HG明朝E",
+  	"ＭＳ Ｐ明朝",
+  	"ＭＳ 明朝",
+  	serif;
+  --font-serif: "Cormorant Infant", serif;
+  --font-gothic: "ヒラギノ角ゴ ProN W3",
+  	"Hiragino Kaku Gothic ProN",
+  	"游ゴシック",
+  	"Yu Gothic",
+  	"メイリオ",
+  	sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  word-break: normal;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: var(--color-base);
+  font-family: var(--font-gothic);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.73;
+  text-align: center;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-base);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+}
+
+/*英語フォント*/
+.c-inner {
+  width: calc(100% - 16vw);
+  margin: auto;
+  max-width: 856px;
+}
+@media print, screen and (min-width:768px) {
+  .c-inner {
+    width: calc(100% - 8vw);
+  }
+}
+
+.c-inner-wide {
+  width: calc(100% - 8vw);
+  margin: auto;
+  max-width: 856px;
+}
+@media print, screen and (min-width:768px) {
+  .c-inner-wide {
+    width: calc(100% - 8vw);
+  }
+}
+
+.u-fitcover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover;";
+  width: 100%;
+  height: 100%;
+}
+.u-fitcover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover;";
+  width: 100%;
+  height: 100%;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+/*PCのみ*/
+@media only screen and (max-width:767px) {
+  .u-only-pc {
+    display: none !important;
+  }
+}
+
+/*スマホのみ*/
+@media print, screen and (min-width:768px) {
+  .u-only-sp {
+    display: none !important;
+  }
+}
+
+.u-upper {
+  text-transform: uppercase;
+}
+
+.l-main {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  place-content: center;
+  place-items: center;
+  height: 100%;
+  padding: 64px 16px;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #efefef;
+  height: 100svh;
+}
+
+.p-about {
+  margin: 8vw auto;
+}
+@media print, screen and (min-width:768px) {
+  .p-about {
+    margin: 40px auto;
+    max-width: 498px;
+  }
+}
+.p-about__title {
+  text-align: left;
+  margin-bottom: 1em;
+  font-size: clamp(10px, 3.2vw, 18px);
+}
+
+.c-button-icon-text-arrow > a, .c-button-icon-text-arrow > span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--color-main);
+  padding: 1em 2.5em;
+  color: var(--color-main);
+  font-size: min(4.2666666667vw, 2.048rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media print, screen and (min-width:768px) {
+  .c-button-icon-text-arrow > a, .c-button-icon-text-arrow > span {
+    font-size: 2.1rem;
+    letter-spacing: 0.1em;
+    padding: 1em 1em 1em 20%;
+  }
+}
+.c-button-icon-text-arrow > a .icon, .c-button-icon-text-arrow > span .icon {
+  height: 1.1em;
+  aspect-ratio: 24/16;
+  margin-right: 0.5em;
+}
+@media print, screen and (min-width:768px) {
+  .c-button-icon-text-arrow > a .icon, .c-button-icon-text-arrow > span .icon {
+    margin-right: 1em;
+  }
+}
+.c-button-icon-text-arrow > a .icon svg, .c-button-icon-text-arrow > span .icon svg {
+  width: auto;
+  height: 100%;
+  overflow: visible;
+}
+.c-button-icon-text-arrow > a .icon svg *, .c-button-icon-text-arrow > span .icon svg * {
+  fill: var(--color-main);
+  -webkit-transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.c-button-icon-text-arrow > a::after, .c-button-icon-text-arrow > span::after {
+  content: "";
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.1em;
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 1px solid var(--color-main);
+  border-top: 1px solid var(--color-main);
+  -webkit-transform: translateX(-25%) rotate(45deg);
+          transform: translateX(-25%) rotate(45deg);
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.c-button-icon-text-arrow > a:hover, .c-button-icon-text-arrow > span:hover {
+  opacity: 1;
+  color: #fff;
+  background-color: var(--color-main);
+}
+.c-button-icon-text-arrow > a:hover .icon svg *, .c-button-icon-text-arrow > span:hover .icon svg * {
+  fill: #fff;
+}
+.c-button-icon-text-arrow > a:hover::after, .c-button-icon-text-arrow > span:hover::after {
+  border-color: #fff;
+}
+
+.c-button-bg-left-flow a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  min-height: 42px;
+  padding: 1em 0;
+  font-size: max(10px, 4.5333333333vw);
+  border: 1px solid var(--color-base);
+  background-color: var(--color-base);
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  line-height: 1;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+@media print, screen and (min-width:768px) {
+  .c-button-bg-left-flow a {
+    /*PCのみ*/
+    min-height: auto;
+    padding: 0.8em 0;
+    font-size: min(2.1vw, 2.1rem);
+    border-width: 2.5px;
+  }
+}
+.c-button-bg-left-flow a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: var(--color-main);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+.c-button-bg-left-flow a:before {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+.c-button-bg-left-flow a .text {
+  position: relative;
+  z-index: 3;
+  color: var(--color-main);
+}
+.c-button-bg-left-flow a .arrow {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  bottom: 0;
+  margin: auto 0;
+  width: 1.35em;
+  height: auto;
+  z-index: 3;
+}
+.c-button-bg-left-flow a .arrow g {
+  stroke: var(--color-main);
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+.c-button-bg-left-flow a:hover {
+  opacity: 1;
+}
+.c-button-bg-left-flow a:hover span {
+  color: var(--color-base);
+}
+.c-button-bg-left-flow a:hover:before {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.c-button-bg-left-flow a:hover g {
+  stroke: var(--color-base);
+}

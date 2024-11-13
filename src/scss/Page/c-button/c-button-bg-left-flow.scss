@@ -3,16 +3,17 @@
 .c-button-bg-left-flow {
 
 	a {
-		//ブロック部分
+		/*ブロック部分*/
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		overflow: hidden; //背景のアニメーションが飛び出るのを防ぐ
+		overflow: hidden;
+		/*背景のアニメーションが飛び出るのを防ぐ*/
 		min-height: 42px;
 		padding: 1em 0;
 
-		//フォント部分
+		/*フォント部分*/
 		font-size: max(10px, s.vw(s.$spDesign, 17));
 		border: 1px solid var(--color-base);
 		background-color: var(--color-base);
@@ -21,11 +22,11 @@
 		line-height: 1;
 
 
-		//アニメーション
+		/*アニメーション*/
 		transition: ease .2s;
 
 		@include s.media(md) {
-			/*PCのみ*/
+			// PCのみ
 			min-height: auto;
 			padding: 0.8em 0;
 			font-size: min(s.vw(1000, 21), 2.1rem);
@@ -33,7 +34,7 @@
 		}
 
 
-		//背景のアニメーション（左から右に流れる）
+		/*背景のアニメーション（左から右に流れる）*/
 		&:before {
 			content: '';
 			position: absolute;
@@ -48,9 +49,10 @@
 			transform-origin: right top;
 		}
 
-		//背景のアニメーション（ホバー：左から右に拡大、ホバーを解除したら右から左にもどる）
+		/*背景のアニメーション（ホバー：左から右に拡大、ホバーを解除したら右から左にもどる）*/
 		&:before {
-			transform-origin: left top; //ここを変更
+			transform-origin: left top;
+			/*ここを変更*/
 		}
 
 		.text {

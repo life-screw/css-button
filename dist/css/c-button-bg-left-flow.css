@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*英語フォント*/
 .c-button-bg-left-flow a {
+  /*ブロック部分*/
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,20 +13,24 @@
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  /*背景のアニメーションが飛び出るのを防ぐ*/
   min-height: 42px;
   padding: 1em 0;
+  /*フォント部分*/
   font-size: max(10px, 4.5333333333vw);
   border: 1px solid var(--color-base);
   background-color: var(--color-base);
   letter-spacing: 0.12em;
   font-weight: 900;
   line-height: 1;
+  /*アニメーション*/
   -webkit-transition: ease 0.2s;
   transition: ease 0.2s;
+  /*背景のアニメーション（左から右に流れる）*/
+  /*背景のアニメーション（ホバー：左から右に拡大、ホバーを解除したら右から左にもどる）*/
 }
-@media print, screen and (min-width:769px) {
+@media print, screen and (min-width:768px) {
   .c-button-bg-left-flow a {
-    /*PCのみ*/
     min-height: auto;
     padding: 0.8em 0;
     font-size: min(2.1vw, 2.1rem);
@@ -49,6 +54,11 @@
           transform: scale(0, 1);
   -webkit-transform-origin: right top;
           transform-origin: right top;
+}
+.c-button-bg-left-flow a:before {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  /*ここを変更*/
 }
 .c-button-bg-left-flow a .text {
   position: relative;

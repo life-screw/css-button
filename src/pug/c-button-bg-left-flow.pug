@@ -1,0 +1,37 @@
+//- ページのID名
+- const pageID = "c-button-bg-left-flow"
+//- 画像パス
+- const imgPathCommon = "../img/"
+//- - const imgPath = "./dist/img/" +  pageID + "/"
+
+doctype html
+html(lang="ja")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="format-detection" content="email=no,telephone=no,address=no")
+		title ホバーすると背景が左から伸びるボタン（SVG矢印あり）
+		meta(name="description" content="ホバーすると背景が左から伸びるボタン（SVG矢印あり）")
+		//- 共通CSS
+		link(rel="stylesheet" href="./dist/css/common.css")
+		<!-- ▽▽▽ CSSコードはこちらから▽▽▽ -->
+		//- 個別CSS
+		link(rel="stylesheet" href="./dist/css/" + pageID + ".css")
+		//- <!-- ▽▽▽ JavaScriptコードはこちらから▽▽▽ -->
+		//- 個別JavaScript
+		//- script(src="./" + pageID + ".js" defer)
+	body
+		main.l-main
+			<!-- ▼▼▼ コンテンツの記述ここから ▼▼▼ -->
+
+			section.p-about.c-inner
+				h2.p-about__title ホバーすると背景が左から伸びるボタン（SVG矢印あり）
+
+				p.p-about__link.c-button-bg-left-flow
+					a(href="#" target="_blank" rel="noopener")
+						span.text VIEW MORE
+						//- gのstyle:strokeを消す
+						<svg class="arrow" viewBox="0 0 28.4 22.9" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-miterlimit="10" stroke-width=".8"><path d="m27.8 11.4s0 0 0 0l-8.9-10.3v4.3l5.2 6.1-5.2 6.1v4.3l8.9-10.4z"/><path d="m18.5 11.4s0 0 0 0l-8.9-10.3v4.3l5.2 6.1-5.2 6.1v4.3l8.9-10.4z"/><path d="m9.3 11.4s0 0 0 0l-8.9-10.3v4.3l5.2 6.1-5.2 6v4.3z"/></g></svg>
+
+			<!-- ▲▲▲ コンテンツの記述ここまで ▲▲▲ -->
