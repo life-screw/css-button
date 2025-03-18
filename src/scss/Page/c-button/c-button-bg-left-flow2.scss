@@ -1,6 +1,11 @@
 @use "../../Setting/"as s;
 
-.c-button-bg-left-flow {
+// 共通のトランジションスタイルをミックスインとして定義
+@mixin transition-base {
+	transition: ease .2s;
+}
+
+.c-button-bg-left-flow2 {
 
 	a {
 		/*ブロック部分*/
@@ -9,6 +14,7 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
+		border-radius: 50rem;
 		/*背景のアニメーションが飛び出るのを防ぐ*/
 		min-height: 42px;
 		padding: 1em 0;
@@ -21,14 +27,9 @@
 		font-weight: 900;
 		line-height: 1;
 
-
-		/*アニメーション*/
-		transition: ease .2s;
-
 		@include s.media(md) {
 			// PCのみ
 			min-height: auto;
-			padding: 0.8em 0;
 			font-size: min(s.vw(1000, 21), 2.1rem);
 			border-width: 2.5px;
 		}
@@ -51,36 +52,41 @@
 
 		/*背景のアニメーション（ホバー：左から右に拡大、ホバーを解除したら右から左にもどる）*/
 		&:before {
-			transform-origin: left top; // ここを変更
+			transform-origin: left top;
+			/*ここを変更*/
 		}
 
 		.text {
 			position: relative;
 			z-index: 3;
 			color: var(--color-main);
+			/*アニメーション*/
+			@include transition-base;
 		}
 
-		.arrow {
+		// 矢印(absoluteで右端に固定)-------
+		&::after {
+			content: '';
+			display: block;
+			margin: auto;
 			position: absolute;
 			top: 0;
-			right: 1em;
 			bottom: 0;
-
-			margin: auto 0;
-			width: 1.35em;
-			height: auto;
+			right: 1.6em;
+			width: .5em;
+			height: .5em;
+			border-right: 2px solid var(--color-main);
+			border-top: 2px solid var(--color-main);
+			transform: translateX(-25%) rotate(45deg);
 			z-index: 3;
-
-			g {
-				stroke: var(--color-main);
-				transition: ease .2s;
-			}
+			// ホバー時、色を変更
+			@include transition-base;
 		}
 
 		&:hover {
 			opacity: 1;
 
-			span {
+			.text {
 				color: var(--color-base);
 			}
 
@@ -89,8 +95,8 @@
 				transform: scale(1, 1);
 			}
 
-			g {
-				stroke: var(--color-base);
+			&::after {
+				border-color: var(--color-base);
 			}
 		}
 	}
